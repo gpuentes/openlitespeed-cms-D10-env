@@ -1,4 +1,4 @@
-version: '3'
+version: '3'  #alterar conforme versão do compose (docker, Docker Swarm ou gerenciador de VPS (Ex.: Portainer, Aapanel, 1Panel)
 services:
   mysql:
     image: mariadb:10.5.9
@@ -20,9 +20,9 @@ services:
       DRUPAL_SITE_EMAIL: ${DRUPAL_SITE_EMAIL}
     restart: always
     networks:
-      - default
+      - default #alterar ou criar a sua rede conforme seu gerenciador de VPS (Ex.: Portainer, Aapanel, 1Panel)
   litespeed:
-    image: litespeedtech/openlitespeed-drush:${OLS_VERSION}-${PHP_VERSION}
+    image: litespeedtech/openlitespeed-drush:${OLS_VERSION}-${PHP_VERSION}  #
     logging:
       driver: none
     env_file:
@@ -43,7 +43,7 @@ services:
     environment:
       TZ: ${TimeZone}
     networks:
-      - default
+      - default #alterar ou criar a sua rede conforme seu gerenciador de VPS  (Ex.: Portainer, Aapanel, 1Panel)
   phpmyadmin:
     image: bitnami/phpmyadmin:5.2.0-debian-11-r43
     ports:
@@ -53,7 +53,7 @@ services:
         DATABASE_HOST: mysql
     restart: always
     networks:
-      - default
+      - default  #alterar ou criar a sua rede conforme seu gerenciador de VPS  (Ex.: Portainer, Aapanel, 1Panel)
 networks:
   default:
-    driver: bridge
+    driver: bridge #alterar ou criar a sua rede conforme seu gerenciador de VPS  (Ex.: Portainer, Aapanel, 1Panel)

@@ -17,7 +17,7 @@ Feel free to check [Docker hub Tag page](https://hub.docker.com/repository/docke
 ## Installation
 Clone this repository or copy the files from this repository into a new folder:
 ```
-git clone https://github.com/litespeedtech/ols-drupal-env.git
+git clone [https://github.com/litespeedtech/ols-drupal-env.git](https://github.com/gpuentes/openlitespeed-cms-D10-env.git)
 ```
 Open a terminal, `cd` to the folder in which `docker compose.yml` is saved, and run:
 ```
